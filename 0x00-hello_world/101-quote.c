@@ -3,23 +3,12 @@
 /*
  * main - Entry point
  *
- * Description: Prints 'and that piece of art is useful ... 
+ * -Dora Korpar, 2015-10-19", followed by a new line, to the standrt erro.
+ *  Return: always 0 (Success)
  *
- * Return: 1
  */
 int main(void)
 {
-char*s="and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-long l=59;
-long fd=1;
-long syscall=1;
-long ret=0;
-asm ("syscall"
-: "=a" (ret)
-: "a" (yscall,
-"D" (fd),
-"S" (s),
-"d" (l));
-
+write(2, "and that piece of art is usefull\" - Dora Korpar, 2015-10-19\n", 59);
 return (1);
 }
