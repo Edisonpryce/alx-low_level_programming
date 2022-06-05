@@ -1,8 +1,8 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /*
  * main - Entry point
- *
  * -Dora Korpar, 2015-10-19", followed by a new line, to the standrt erro.
  *  Return: always 0 (Success)
  *
