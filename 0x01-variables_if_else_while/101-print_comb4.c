@@ -18,7 +18,7 @@ n2 = n1 + 1;
 while (n2 <= 57)
 {
 n3 = n3 + 1;
-while (n3 <= 57);
+while (n3 <= 57)
 {
 putchar(n1);
 putchar(n2);
