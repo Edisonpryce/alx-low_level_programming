@@ -22,7 +22,7 @@ putchar((a / 10) + n1);
 putchar((a % 10) + n1);
 putchar(32);
 putchar((b / 10) + n1);
-putchar((b % 10) + n);
+putchar((b % 10) + n1);
 if (a != 98 || b != 99)
 {
 putchar(com);
