@@ -5,7 +5,7 @@
  *
  * Return: 1 (True) else 0 (False)
  */
-int _islower(char c)
+int _islower(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (1);
