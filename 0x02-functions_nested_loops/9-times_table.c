@@ -24,14 +24,14 @@ void times_table(void)
 				_putchar(mult + '0');
 			}
 			else
-		}
-		_putchar(' ');
-		_putchar((mult / 10) + '0');
-		_putchar((mult % 10) + '0');
+			{
+				_putchar(' ');
+				_putchar((mult / 10) + '0');
+				_putchar((mult % 10) + '0');
+			}
+			if (col != 9)
+				_putchar(',');
+			}
+			_putchar('\n');
 	}
-	if (col != 9)
-		_putchar(',');
-}
-_putchar('\n');
-}
 }
