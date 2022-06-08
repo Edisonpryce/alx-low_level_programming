@@ -1,17 +1,16 @@
 #include "main.h"
 /**
- * main -funtion to print
+ * main - Entry point
  * Return 0
  */
 int main(void)
 {
-	int n = 0;
-	char str_put[] = "_putchar\n";
+	char *h = "_putchar\n";
 
-	while (n > 9)
+	while (*h)
 	{
-		_putchar(str_put[n]);
-		n += 1;
+		_putchar(*h);
+		h++;
 	}
 return (0);
 }
