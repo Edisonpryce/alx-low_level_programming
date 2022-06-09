@@ -1,28 +1,25 @@
-#include<math.h>
 #include<stdio.h>
 /**
- * main - Entry point
- * fib -w displace whats next on the timeline
- * n - 
- * Return: 
- *
+ * main - main block
+ * Description: Print the sum of even Fibonacci numbers up to a fib value
+ * not exceeding 4,000,000.
+ * Return: 0
  *
  */
-double fib(long n)
-{
-	double phi = (sqrt(5) + 1) / 2.0;
-	return round(pow(phi, n) / sqrt(5));
-
-}
-
 int main(void)
 {
-	long num;
+	int i = 1, j = 2, total = 0;
+	int k;
 
-	for (num = 0; num < 98; num++)
+	while (j < 4000000)
 	{
-		printf("%ld : ", num);
-		printf("%.0lf \n", fib(num));
-	}
-}
+		if (j % 2 == 0)
+			total += j;
 
+		k = j;
+		j += i;
+		i = k;
+	}
+	printf("%d\n", total);
+	return (0);
+}
