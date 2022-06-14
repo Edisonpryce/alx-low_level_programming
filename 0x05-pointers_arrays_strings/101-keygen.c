@@ -9,7 +9,9 @@
 
 int main(void)
 {
-	int myrand, count, total;
+	int myrand;
+	int count;
+	int total;
 
 	srand(time(NULL));
 	for (count = 0, total = 2772; total > 122; count++)
