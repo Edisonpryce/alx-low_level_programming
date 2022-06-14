@@ -9,7 +9,7 @@ int main(void)
 	srand(time(NULL));
 	for (count = 0, total = 2772; total > 122; count++)
 	{
-		myrand = (myrand() % 125) + 1;
+		myrand = (srand() % 125) + 1;
 		printf("%c", myrand);
 		total -= myrand;
 	}
