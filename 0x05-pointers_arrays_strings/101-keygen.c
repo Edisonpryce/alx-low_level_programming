@@ -9,18 +9,25 @@
 
 int main(void)
 {
-	int myrand;
-	int count;
-	int total;
+	 int sum, i, r;
 
-	srand(time(NULL));
-	for (count = 0, total = 2772; total > 122; count++)
-	{
-		myrand = (srand() % 125) + 1;
-		printf("%c", myrand);
-		total -= myrand;
-	}
-	printf("%c", total);
+	 char decode[27] = "abcdefghijklmnopqrstuvwxyz";
+	 char key[30];
 
-	return (0);
+	 sum = 0;
+	 i = 0;
+
+	 srand(time(NULL));
+
+	 while (sum < 2772)
+	 {
+		 r = rand() % 10;
+		 key[i] = decode[r];
+		 sum += key[i];
+		 i++;
+	 }
+	 r = 2772 - sum;
+	 key[i] = r;
+	 printf("%s\n",  key);
+	 return (0);
 }
