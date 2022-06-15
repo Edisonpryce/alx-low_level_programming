@@ -1,33 +1,25 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
 /**
- * main - Entry point
- * Return: always return 0
+ * main - it all starts here
+ *
+ * Return: 0 always success
  */
 
 int main(void)
 {
-	 int sum, i, r;
+	int sum;
+	char c;
 
-	 char decode[27] = "abcdefghijklmnopqrstuvwxyz";
-	 char key[30];
-
-	 sum = 0;
-	 i = 0;
-
-	 srand(time(NULL));
-
-	 while (sum < 2772)
-	 {
-		 r = rand() % 10;
-		 key[i] = decode[r];
-		 sum += key[i];
-		 i++;
-	 }
-	 r = 2772 - sum;
-	 key[i] = r;
-	 printf("%s\n",  key);
-	 return (0);
+	srand(time(NULL));
+	while (sum <= 2645)
+	{
+		c = rand() % 128;
+			sum += c;
+			putchar(c);
+	}
+	putchar(2772 - sum);
+	return (0);
 }
