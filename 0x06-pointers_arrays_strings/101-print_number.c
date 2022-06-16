@@ -1,7 +1,5 @@
 #include "main.h"
-
-#define ROT13IN  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-#define ROT13OUT "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"
+#include <stdio.h>
 
 /**
  * print_number - using only _putchar
@@ -11,19 +9,43 @@
 
 void print_number(int n)
 {
-	int i, p;
+	int power;
+	int neg;
+	int hold;
 
+	neg = 0;
+	power = 1;
+	hold = n;
 	if (n < 0)
-		_putchar('-');
-	for (p = 0, i = 1000000000; i > 0; i /= 10)
 	{
-		int d = (n / i) % 10;
+		_putchar('-');
+		neg = 1;
+	}
 
-		d = d < 0 ? -d : d;
-		if (d || p || i == 1)
+	while (hold > 9 || hold < -9)
+	{
+		power *= 10;
+		hold /= 10;
+	}
+
+	while (power > 0)
+	{
+		if (power > 9)
 		{
-			_putchar(d + '0');
-			p++;
+			if (!neg)
+				_putchar((n / power % 10) + '0');
+			else
+				_putchar((n / power % 10) * -1 + '0');
+
+			power /= 10;
+		}
+		if (power == 1)
+		{
+			if (neg)
+				_putchar((n % 10) * -1 + '0');
+			else
+				_putchar(n % 10 + '0');
+			power = 0;
 		}
 	}
 }
