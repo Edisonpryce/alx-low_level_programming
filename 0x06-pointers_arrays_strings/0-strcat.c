@@ -3,7 +3,7 @@
 /**
  * _strcat - concatenates two strings
  *
- * @desk: the destination buffer
+ * @dest: char string to concatenate to
  * @src: the source buffer
  *
  * Return: point to destination buffer
@@ -11,12 +11,17 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *ret = dest;
+	int i, c;
 
-	while (*dest)
-		dest++;
-	while (*src)
-		*dest++ = *src++;
-	*dest = *src;
-	return (ret);
+	for (i = 0; dest[i] != '\0'; i++)
+		;
+
+	for (c = 0; src[c] != '\0'; c++)
+	{
+		dest[i] = src[c];
+		i++;
+	}
+
+	dest[i] = '\0';
+	return (dest);
 }
