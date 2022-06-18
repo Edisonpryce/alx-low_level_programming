@@ -2,8 +2,9 @@
 
 /**
  * rev_string - reverse array
- * @n: integer params
+ * @n: integer params i
  * Return: 0
+ *
  */
 
 void rev_string(char *n)
